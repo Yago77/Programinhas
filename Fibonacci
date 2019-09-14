@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>                             //fibonacci = soma dos dois números anteriores;    0 1 1 2 3 5 8 13 21
+
+int main ()
+
+{      
+	setlocale(LC_ALL,"Portuguese");                //código para poder usar os acentos da língua portuguesa
+	
+	int i,ant=0,prox=1,resposta,x;
+ 	printf("Digite quantos números da sequência de Fibonacci você quer que apareça: ");
+	scanf("%d",&x); 
+	printf("A sequência de Fibonacci é:\n");
+	
+	for(i=0; i<x; i++){                     //i vai contar até o número digitado pelo usuário,iniciando a contagem abaixo.                 
+		resposta = ant + prox;                 //a variável "resposta" é a variável "ant",que é 0 + a variável "prox",que é 1
+		ant = prox;                            // a variável "ant" recebe "prox"
+		prox = resposta;	                     // a variável "prox" recebe a variável "resposta" repetindo o ciclo até o número digitado.
+		printf("- %d",ant);
+	}
+	return 0;
+}
