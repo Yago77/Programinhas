@@ -5,7 +5,7 @@
 int main ()
 
 {      
-	setlocale(LC_ALL,"Portuguese");                //código para poder usar os acentos da língua portuguesa
+	setlocale(LC_ALL,"");                //código para poder usar os acentos da língua portuguesa
 	
 	int i,ant=0,prox=1,resposta,x;
  	printf("Digite quantos números da sequência de Fibonacci você quer que apareça: ");
@@ -14,8 +14,8 @@ int main ()
 	
 	for(i=0; i<x; i++){                     //i vai contar até o número digitado pelo usuário,iniciando a contagem abaixo.                 
 		resposta = ant + prox;                 //a variável "resposta" é a variável "ant",que é 0 + a variável "prox",que é 1
-		ant = prox;                            // a variável "ant" recebe "prox"
-		prox = resposta;	                     // a variável "prox" recebe a variável "resposta" repetindo o ciclo até o número digitado.
+		ant = prox;                            // a variável "ant" recebe "prox",virando 1
+		prox = resposta;	               // a variável "prox" recebe a variável "resposta",também virando 1, repetindo o ciclo até o número digitado.
 		printf("- %d",ant);
 	}
 	return 0;
