@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include <locale.h>
+ 
+int main()
+
+ {
+ 	
+ 	setlocale(LC_ALL, "");               //código para poder usar acentos
+ 	int x,i,count = 0; 
+ 
+ 	printf("Digite um número e direi se ele é primo: ");
+ 	scanf("%d", &x);
+ 
+ 	for (i = 2; i <= x / 2; i++) {                              //Iremos fazer todas as divisões sucessivas do número dado por todos os números a partir de 2 até a metade dele,e verificar o resto da divisão
+   		 if (x % i == 0) {                                     // Se o resto for zero,o contador aumenta em 1.
+     	  	count++;
+      		break;
+    	}
+ 	}
+	if (count == 0){                                            //Se depois das divisões o contador se manter em zero,significa que o número é primo
+  	printf("%d é um número primo\n",x);
+  	}else{                                                     
+    printf("%d não é um número primo\n",x);
+	}
+	
+ 	return 0;
+ 
+}
