@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int contarStr(char str[30]){               //criando vetor com limite de 30.
+	int i=0, counter = 0;
+	
+	for(i=0;i<50;i++)                       //contador para as strings
+	{
+		if(str[i] != '\0')				          	//se o valor do ''i'' for diferente de nulo,incrementa um no contador.
+			counter++;                		
+		else
+			return counter;                     //se não,encerra a contagem.
+	}
+	return counter;
+}
+
+int main()          
+
+{
+	char str1[30];							                  //definindo a variável vetor para receber a string.
+	printf("Digite um texto: ");
+	scanf("%[a-z A-Z]",str1);				              //definindo strings que eu quero que sejam disponíveis.
+    
+	printf("%d strings nessa frase.\n",contarStr(str1));			
+
+	return 0;
+}	
