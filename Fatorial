@@ -1,0 +1,21 @@
+#include <stdio.h>                                              
+#include <locale.h>
+
+int main()																				
+ 
+{
+	setlocale(LC_ALL,"");                              
+	
+	unsigned int x,fatorial = 1;                     
+	
+	printf("Digite um número e darei o seu fatorial: ");
+	scanf("%d",&x);
+	
+	while(x>0){                              //enquanto a variável for maior que zero,ele vai fazendo a multiplicação.
+		fatorial *= x--;
+	}
+
+	printf("o fatorial é %d",fatorial);
+	
+	return 0;
+}
